@@ -1,0 +1,16 @@
+set from      = "poulpatine@gmail.com"
+set sendmail  = "/usr/local/bin/msmtpq -a perso"
+set sendmail_wait = -1
+set mbox      = "+perso/INBOX"
+set postponed = "+perso/drafts"
+set signature = "~/.mutt/sig-perso"
+
+color status green default
+
+macro index D \
+    "<save-message>+perso/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+perso/Spam<enter>"  \
+        "mark message as spam"

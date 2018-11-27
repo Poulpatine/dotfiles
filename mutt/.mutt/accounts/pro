@@ -1,0 +1,17 @@
+set realname  = "Benjamin BINIER"
+set from      = "benjamin.binier@gmail.com"
+set sendmail  = "/usr/local/bin/msmtpq -a pro"
+set sendmail_wait = -1
+set mbox      = "+pro/archive"
+set postponed = "+pro/drafts"
+set signature = "~/.mutt/sig-pro"
+
+color status cyan default
+
+macro index D \
+    "<save-message>+pro/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+pro/Spam<enter>"  \
+        "mark message as spam"
