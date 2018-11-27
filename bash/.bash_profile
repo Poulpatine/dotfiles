@@ -79,7 +79,7 @@ function testping() {
 }
 
 function gping() {	
-	host="${1:=www.nextimpact.com}"  
+	host="${1:-www.nextimpact.com}"  
 	while :; do
 		echo "resolve $host"
 		if host -W 1 "$host" >/dev/null 2>&1; then
