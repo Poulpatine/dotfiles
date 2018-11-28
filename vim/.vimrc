@@ -14,6 +14,8 @@ Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh
 Plug 'tpope/vim-fugitive'             "git in vim
 " Linting
 Plug 'w0rp/ale'			              "syntax checking
+Plug 'nvie/vim-flake8'                "syntax checking
+Plug 'hynek/vim-python-pep8-indent'   "auto indent python
 " Completion
 Plug 'maralla/completor.vim'
 Plug 'tpope/vim-surround'             "auto add brackets quotes ...
