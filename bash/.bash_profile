@@ -31,6 +31,7 @@ export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
 export HISTSIZE=32768
 export HISTFILESIZE=32768
 export PAGER=less
+export BROWSER=firefox
 export LESS='-JMQRSi'
 export HISTCONTROL=ignoreboth
 export TMPDIR="/tmp"
