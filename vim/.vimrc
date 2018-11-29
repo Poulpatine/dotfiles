@@ -96,7 +96,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 " /completor
 
 " vim-test
-"let test#python#runner = 'pipenv run nosetest'
 let test#strategy = "vimterminal"
 let g:test#preserve_screen = 1
 nmap <silent> t<C-n> :TestNearest<CR> " t Ctrl+n
@@ -105,6 +104,10 @@ nmap <silent> t<C-s> :TestSuite<CR>   " t Ctrl+s
 nmap <silent> t<C-l> :TestLast<CR>    " t Ctrl+l
 nmap <silent> t<C-g> :TestVisit<CR>   " t Ctrl+g
 " /vim-test
+
+" vim-tmux-navigator
+let g:tmux_navigator_disable_when_zoomed = 1
+" /vim-tmux-navigator
 
 " switch between buffers
 set hidden
