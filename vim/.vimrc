@@ -12,10 +12,11 @@ Plug 'junegunn/vim-plug'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 " Git
 Plug 'tpope/vim-fugitive'             "git in vim
+" Python
+Plug 'nvie/vim-flake8'                "python linting
+Plug 'hynek/vim-python-pep8-indent'   "python auto indent
 " Linting
 Plug 'w0rp/ale'			              "syntax checking
-Plug 'nvie/vim-flake8'                "syntax checking
-Plug 'hynek/vim-python-pep8-indent'   "auto indent python
 " Completion
 Plug 'maralla/completor.vim'
 Plug 'tpope/vim-surround'             "auto add brackets quotes ...
@@ -33,7 +34,6 @@ Plug 'vim-scripts/ZoomWin'            "quick zoom in buffer
 Plug 'tmhedberg/SimpylFold'           "easy folding
 Plug 'scrooloose/nerdtree'		      "file explorer
 Plug 'scrooloose/nerdcommenter'	      "easy comment
-Plug 'tpope/vim-surround'             "easy surrounding
 Plug 'gcmt/wildfire.vim'              "easy select
 Plug 'ctrlpvim/ctrlp.vim'             "fuzzy finding
 Plug 'christoomey/vim-tmux-navigator' "navigate between tmux and vim
@@ -41,7 +41,6 @@ Plug 'christoomey/vim-tmux-navigator' "navigate between tmux and vim
 Plug 'ryanoasis/vim-devicons'         "fancy icons in vim
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "fancy colors
 call plug#end()
-
 
 " --- General settings ---
 set encoding=UTF-8
@@ -79,7 +78,6 @@ noremap <tab> zc
 " shift-tab to unfold
 noremap <s-tab> zo 
 " /folding
-
 
 " plugins config
 let NERDTreeMinimalUI = 1
@@ -131,7 +129,6 @@ augroup CursorLine
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     au WinLeave * setlocal nocursorline
 augroup END
-
 " /cursorline
 
 " marking long lines
@@ -140,7 +137,6 @@ set colorcolumn=80
 :autocmd BufNewFile,BufRead test_*.py set textwidth=99
 highlight ColorColumn ctermbg=236
 " /marking long lines
-
 
 " statusline
 set laststatus=2
@@ -152,7 +148,6 @@ if version >= 700
     au InsertEnter * highlight StatusLine cterm=bold ctermfg=7 ctermbg=2
 endif
 " /statusline
-
 
 " ale
 let g:ale_sign_error = '✖'
@@ -224,6 +219,8 @@ nnoremap <leader>z :ZoomWin<CR>
 " language client menu
 " F5
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" clear last used search pattern
+nnoremap , :let @/ = ""<CR>
 " /bindings
 
 " disable arrows
