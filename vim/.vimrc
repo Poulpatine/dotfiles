@@ -224,6 +224,8 @@ nnoremap <leader>z :ZoomWin<CR>
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " clear last used search pattern
 nnoremap , :let @/ = ""<CR>
+" force write with sudo
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " /bindings
 
 " disable arrows
