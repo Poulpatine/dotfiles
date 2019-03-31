@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+
+[[ -d "${HOME}/bin" ]] && PATH="${HOME}/bin:$PATH"
+
+export PATH
 
 # Conf X
 /usr/bin/xrdb -merge ~/.Xresources &
