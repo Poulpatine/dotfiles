@@ -171,6 +171,7 @@ let g:ale_pattern_options = {
             \}
 let g:ale_linters = {'eruby': []}
 let g:ale_linters = {'ruby': ['rubocop']}
+let g:ale_linters = {'sh': ['shellcheck']}
 " /ale
 
 " LSP
