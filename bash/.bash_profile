@@ -39,6 +39,7 @@ export TMPDIR="/tmp"
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
 PS1="[\[\033[1;35m\]\!\[\033[0m\]|\[\033[1;31m\]\$?\[\033[0m\]][\[\033[1;33m\]\D{%F %T}\[\033[0m\]][\[\033[1;36m\]\u\[\033[0m\]@\[\033[1;32m\]\h\[\033[0m\]:\w]\n\\$ "
@@ -56,6 +57,8 @@ alias xup="xrdb ~/.Xresources"
 alias dusort='sudo du -sh * | sort -h'
 alias pr="pipenv run"
 alias prp="pipenv run python"
+
+command -v hub >/dev/null 2>&1 && alias git="hub"
  
 
 # WOW SO MUCH COLOURS
@@ -417,4 +420,8 @@ function cpprun {
 		return 1
 	fi
 	echo ""
+}
+
+function pacorphan {
+    sudo  pacman -Rns $(pacman -Qtdq)
 }
