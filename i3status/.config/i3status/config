@@ -12,6 +12,7 @@ order += "brightness"
 order += "disk /"
 order += "wireless wlp4s0"
 order += "ethernet enp0s25"
+order += "ethernet ppp0"
 order += "battery 0"
 order += "cpu_temperature 0"
 order += "cpu_usage 0"
@@ -26,6 +27,13 @@ wireless wlp4s0 {
 ethernet enp0s25 {
     format_up = "%ip"
     format_down = ""
+}
+
+ethernet ppp0 {
+    format_up = "ppp: %ip"
+    format_down = ""
+    color_good = "#008BF5"
+    color_bad = "#AAAAAA"
 }
 
 battery 0 {
