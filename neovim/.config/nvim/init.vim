@@ -43,6 +43,7 @@ Plug 'christoomey/vim-tmux-navigator' "navigate between tmux and vim
 " Style
 Plug 'ryanoasis/vim-devicons'         "fancy icons in vim
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "fancy colors
+Plug 'srcery-colors/srcery-vim'       "fancy colorscheme
 call plug#end()
 
 " --- General settings ---
@@ -65,6 +66,8 @@ set smartindent
 set autoindent
 
 set background=dark
+set termguicolors
+colorscheme srcery
 
 set scrolloff=10        " always stay in the middle of the screen
 
